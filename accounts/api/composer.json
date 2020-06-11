@@ -2,9 +2,10 @@
     "type": "project",
     "license": "proprietary",
     "require": {
-        "php": "^7.2.5",
+        "php": "7.4.*",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "ext-xml": "*",
         "api-platform/api-pack": "^1.2",
         "lexik/jwt-authentication-bundle": "^2.6",
         "sensio/framework-extra-bundle": "^5.5",

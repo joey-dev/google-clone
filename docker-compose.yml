@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+    mysql:
+        build:
+            context: .
+            dockerfile: docker/mysql/Dockerfile
+        env_file:
+          - ./docker/mysql/.env
+        networks:
+            - accounts
+        volumes:
+            - ./docker/mysql/sql_data:/var/lib/mysql
+            - ./docker/mysql/init:/docker-entrypoint-initdb.d
+
+networks:
+    accounts:
+        external: true

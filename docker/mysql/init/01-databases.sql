@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS `accounts`;
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';

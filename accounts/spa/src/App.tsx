@@ -1,11 +1,19 @@
 import React from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import Homepage from './pages/homepage/Homepage';
 
-const App: React.FC = () => {
-    return (
-        <div>
-            <h1>This is an react app with ts!</h1>
-        </div>
+type Props = {};
+
+const App: React.FC<Props> = () => {
+
+    const routes = (
+        <Switch>
+            <Route path="/" exact component={Homepage} />
+            <Redirect to="/" />
+        </Switch>
     );
+
+    return routes;
 };
 
 export default App;
